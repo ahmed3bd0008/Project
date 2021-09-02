@@ -1,0 +1,7 @@
+@model Dictionary<string,FakeProduct>
+@foreach (var item in  Model.Values)
+{
+    <p>@Model.Keys</p>
+    <p>@item?.Name</p>
+    <p>@item?.RelatedProduct?.Name</p>
+}

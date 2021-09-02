@@ -1,0 +1,28 @@
+@model List<FakeProduct>
+<h1 style="color: red;">Used of Nullabel</h1>
+@foreach (var item in Model)
+{
+    <h5>
+            <p>@item?.Name</p>
+            <p>@item?.Price</p>
+            <p>@item?.RelatedProduct?.Name</p>
+            <p>@item?.RelatedProduct?.Price</p>
+    </h5>
+}
+<h1 style="color: red;">Combining the Conditional and Coalescing Operators</h1>
+@foreach (var item in Model)
+{
+    
+        var name=item?.Name??"noname";
+        var Price=item?.Price ?? 0.0M;
+        var related_name=item?.RelatedProduct?.Name ?? "non related name";
+        //this is error trye to put int value if price has value and else but string
+       // var relate_prie=item?.RelatedProduct?.Price ?? "non related price";
+        var relate_prie=item?.RelatedProduct?.Price ??0.0M;
+    <h5>
+            <p>@name</p>
+            <p>@Price</p>
+            <p>@related_name</p>
+            <p>@relate_prie</p>
+    </h5>
+}
