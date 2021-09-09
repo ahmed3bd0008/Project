@@ -21,7 +21,7 @@ namespace FirstProject.Controllers
         public IActionResult Index()
         {
           
-          
+      
             return View();
         }
         #region Nullabel 
