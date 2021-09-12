@@ -9,7 +9,7 @@ namespace dokumen.pub_ultimate.Extension
     {
             public static void ConfigurationSqlServer(this IServiceCollection services,IConfiguration configuration)
              {
-                services.AddDbContext<RepoDbContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"),b=>b.MigrationsAssembly("Entities")));
+                services.AddDbContext<RepoDbContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"),b=>b.MigrationsAssembly("dokumen.pub_ultimate-aspnet-core-3-web-api")));
              }
     }
 }
