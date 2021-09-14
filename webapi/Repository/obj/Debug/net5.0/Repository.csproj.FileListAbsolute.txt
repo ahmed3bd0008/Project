@@ -1,0 +1,5 @@
+C:\Users\ahmedG\Desktop\project\webapi\Repository\obj\Debug\net5.0\Repository.csproj.AssemblyReference.cache
+C:\Users\ahmedG\Desktop\project\webapi\Repository\obj\Debug\net5.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmedG\Desktop\project\webapi\Repository\obj\Debug\net5.0\Repository.AssemblyInfoInputs.cache
+C:\Users\ahmedG\Desktop\project\webapi\Repository\obj\Debug\net5.0\Repository.AssemblyInfo.cs
+C:\Users\ahmedG\Desktop\project\webapi\Repository\obj\Debug\net5.0\Repository.csproj.CoreCompileInputs.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {}
+    "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\ahmedG\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmedG\\AppData\\Roaming\\NuGet\\NuGet.Config",
