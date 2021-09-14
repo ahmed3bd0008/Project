@@ -20,7 +20,7 @@ namespace FirstProject.Controllers
 
         public IActionResult Index()
         {
-          
+          int x=10;
             return View();
         }
         #region Nullabel 
