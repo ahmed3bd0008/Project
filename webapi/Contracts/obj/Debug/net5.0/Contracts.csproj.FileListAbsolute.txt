@@ -10,3 +10,6 @@ C:\Users\ahmedG\Desktop\project\webapi\Contracts\obj\Debug\net5.0\Contracts.cspr
 C:\Users\ahmedG\Desktop\project\webapi\Contracts\obj\Debug\net5.0\Contracts.dll
 C:\Users\ahmedG\Desktop\project\webapi\Contracts\obj\Debug\net5.0\ref\Contracts.dll
 C:\Users\ahmedG\Desktop\project\webapi\Contracts\obj\Debug\net5.0\Contracts.pdb
+C:\Users\ahmedG\Desktop\project\webapi\Contracts\bin\Debug\net5.0\Entities.dll
+C:\Users\ahmedG\Desktop\project\webapi\Contracts\bin\Debug\net5.0\Entities.pdb
+C:\Users\ahmedG\Desktop\project\webapi\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Contracts.Interface;
+using Entity.Model;
 
 namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controllers
 {
@@ -17,23 +19,20 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+                        private readonly IMangeRepository _mangeRepository;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+                        public WeatherForecastController(ILogger<WeatherForecastController> logger,IMangeRepository mangeRepository)
         {
             _logger = logger;
+            _mangeRepository=mangeRepository;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Company> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            
+            return(  _mangeRepository.componyRepository.FindAll(false).ToArray());
+           
         }
     }
 }

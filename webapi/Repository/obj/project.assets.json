@@ -1485,6 +1485,9 @@
       "Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Contracts.dll": {}
         },
@@ -5742,11 +5745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\ahmedG\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmedG\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5756,17 +5759,18 @@
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {
-              "projectPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj"
+            "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Contracts\\Contracts.csproj"
             },
-            "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Entities\\Entities.csproj": {
-              "projectPath": "c:\\Users\\ahmedG\\Desktop\\project\\webapi\\Entities\\Entities.csproj"
+            "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ahmedG\\Desktop\\project\\webapi\\Entities\\Entities.csproj"
             }
           }
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using dokumen.pub_ultimate.Extension;
-using Entity.Context;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -33,6 +33,7 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api
 
             services.AddControllers();
             services.ConfigurationSqlServer(Configuration);
+            services.ConfigurationRepositoryServer();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "dokumen.pub_ultimate_aspnet_core_3_web_api", Version = "v1" });
