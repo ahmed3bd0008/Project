@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Entity.DataTransferObject;
 using AutoMapper;
 using System.Collections.Generic;
+using System;
 
 namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
 {
@@ -66,6 +67,16 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
                                    
                                        var companies= _mangeRepository.componyRepository.FindAll(false).ToArray();
                                        var companyDtos=_mapper.Map<List< CompanyDto>>(companies);
+                                       return Ok(companyDtos);
+                                    
+                        }
+                        [HttpGet("GetCompany/{Id}")]
+                          public IActionResult GetCompanyAutoMapper(Guid Id)
+                        {
+                                   
+                                       var company= _mangeRepository.componyRepository.GetCompany(Id,false);
+                                       if(company==null) return NotFound();
+                                       var companyDtos=_mapper.Map<CompanyDto>(company);
                                        return Ok(companyDtos);
                                     
                         }

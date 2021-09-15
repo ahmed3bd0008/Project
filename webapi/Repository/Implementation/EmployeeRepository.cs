@@ -3,6 +3,7 @@ using System.Linq;
 using Contracts.Interface;
 using Entity.Context;
 using Entity.Model;
+using System.Collections.Generic;
 
 namespace Repository.Implementation
 {
@@ -16,6 +17,16 @@ namespace Repository.Implementation
                         public Employee GetEmployee(Guid EmployeeId, bool asTracking)
                         {
                                  return FindByCondation(d=>d.Id.Equals(EmployeeId),asTracking).SingleOrDefault();
+                        }
+
+                        public Employee GetEmployeeByCompany(Guid CompanyId, Guid EmployeeId, bool asTracking)
+                        {
+                                    return FindByCondation(d=>d.CompanyId.Equals(CompanyId)&& d.Id.Equals(EmployeeId),asTracking).SingleOrDefault();
+                        }
+
+                        public IEnumerable<Employee> GetEmployeesByCompany(Guid CompanyId, bool asTracking)
+                        {
+                                 return FindByCondation(d=>d.CompanyId.Equals(CompanyId),asTracking);
                         }
             }
 }
