@@ -6,6 +6,7 @@ using Entity.DataTransferObject;
 using AutoMapper;
 using System.Collections.Generic;
 using System;
+using Entity.Model;
 
 namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
 {
@@ -79,6 +80,20 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
                                        var companyDtos=_mapper.Map<CompanyDto>(company);
                                        return Ok(companyDtos);
                                     
+                        }
+                        [HttpPost]
+                        public IActionResult CreateCompany(AddCompanyDto addCompanyDto)
+                        {
+                           if(addCompanyDto ==null)
+                           {
+                              _logger.LogError("Thier is an error with company");
+                              return NotFound();
+                           }
+                           var company=_mapper.Map<Company>(addCompanyDto);
+                           _mangeRepository.componyRepository.Create(company);
+                           _mangeRepository.Save();
+                           var compoanyDto=_mapper.Map<CompanyDto>(company);
+                           return CreatedAtRoute("companybyid",new{Id=company.Id},compoanyDto);
                         }
    } 
 }
