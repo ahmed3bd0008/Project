@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using Contracts.Interface;
 using Entity.Context;
 using Entity.Model;
@@ -10,5 +12,10 @@ namespace Repository.Implementation
                 {
                     
                 }
-    }
+
+                        public Employee GetEmployee(Guid EmployeeId, bool asTracking)
+                        {
+                                 return FindByCondation(d=>d.Id.Equals(EmployeeId),asTracking).SingleOrDefault();
+                        }
+            }
 }

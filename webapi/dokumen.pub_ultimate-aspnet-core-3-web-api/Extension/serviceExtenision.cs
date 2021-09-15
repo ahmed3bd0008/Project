@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Repository.Implementation; 
-namespace dokumen.pub_ultimate.Extension
+namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Extension
 {
     public static class serviceExtension
     {
