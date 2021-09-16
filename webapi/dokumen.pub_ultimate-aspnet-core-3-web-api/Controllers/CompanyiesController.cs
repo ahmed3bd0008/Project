@@ -81,8 +81,8 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
                                        return Ok(companyDtos);
                                     
                         }
-                        [HttpPost]
-                        public IActionResult CreateCompany(AddCompanyDto addCompanyDto)
+                        [HttpPost("CreateCompany")]
+                        public IActionResult CreateCompany([FromBody]AddCompanyDto addCompanyDto)
                         {
                            if(addCompanyDto ==null)
                            {
@@ -93,7 +93,24 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controller
                            _mangeRepository.componyRepository.Create(company);
                            _mangeRepository.Save();
                            var compoanyDto=_mapper.Map<CompanyDto>(company);
-                           return CreatedAtRoute("companybyid",new{Id=company.Id},compoanyDto);
+                           return Ok(compoanyDto);
+                           //return  CreatedAtRoute("CompanyById", new { id = compoanyDto.Id }, compoanyDto);
+                           // return CreatedAtRoute("companybyid",new{id=company.Id},compoanyDto);
+                        }
+                        [HttpPost("AddCompanyWithEmployees")]
+                        public IActionResult AddCompanyWithEmployees(AddCompanywithEmployeesDto addCompanyDto)
+                        {
+                            if(addCompanyDto ==null)
+                           {
+                              _logger.LogError("Thier is an error with company");
+                              return NotFound();
+                           }
+                           var company=_mapper.Map<Company>(addCompanyDto);
+                           _mangeRepository.componyRepository.Create(company);
+                          // _mangeRepository.Save();
+                           var compoanyDto=_mapper.Map<CompanyDto>(company);
+                           return Ok(compoanyDto);
+                           
                         }
    } 
 }

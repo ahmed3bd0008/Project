@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Entity.DataTransferObject
 {
     public class CompanyDto
@@ -11,5 +12,12 @@ namespace Entity.DataTransferObject
                 public string Name { get; set; }
                 public string Address { get; set; }
                 public string Country { get; set; }
+    }
+     public class AddCompanywithEmployeesDto
+    {
+                public string Name { get; set; }
+                public string Address { get; set; }
+                public string Country { get; set; }
+                public IEnumerable<AddEmployeeDto>AddEmployeeDtos{set;get;}
     }
 }

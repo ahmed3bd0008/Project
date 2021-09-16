@@ -7,6 +7,7 @@ namespace Contracts.Interface
     {
            public Employee GetEmployee(System.Guid EmployeeId, bool asTracking);
             public IEnumerable<Employee> GetEmployeesByCompany(Guid CompanyeId, bool asTracking);
-               public Employee GetEmployeeByCompany(Guid CompanyId,Guid EmployeeId, bool asTracking);
+            public Employee GetEmployeeByCompany(Guid CompanyId,Guid EmployeeId, bool asTracking);
+            public void CreateEmployee(Guid CompanyId,Employee Employee);
     }
 }

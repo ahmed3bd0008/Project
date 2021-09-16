@@ -48,6 +48,26 @@ namespace dokumen.pub_ultimate_aspnet_core_3_web_api.Controllers
                              var employeeDto=_mapper.Map<EmployeeDto>(Employee);
                              return Ok( employeeDto);
                         }
+                        [HttpPost("Company/{CompanyId}/CreateEmploy")]
+                        public IActionResult CreateEmployee(Guid CompanyId,AddEmployeeDto AddEmployeeDto)
+                        {
+                            if(AddEmployeeDto == null)
+                            {
+                                _logger.LogError("thier is an error");
+                                return NotFound();
+                            }
+                            var company=_mangeRepository.componyRepository.FindByCondation(del=>del.Id.Equals(CompanyId),false);
+                            if(company == null)
+                            {
+                                _logger.LogError("thier is an error");
+                                return NotFound();
+                            }
+                            var Employee=_mapper.Map<Employee>(AddEmployeeDto);
+                            _mangeRepository.employeeRepository.CreateEmployee(CompanyId,Employee);
+                            _mangeRepository.Save();
+                            var EmployeeDto=_mapper.Map<EmployeeDto>(Employee);
+                            return Ok(EmployeeDto);
+                        }
                         
                     
 

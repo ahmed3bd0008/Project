@@ -14,6 +14,12 @@ namespace Repository.Implementation
                     
                 }
 
+                        public void CreateEmployee(Guid CompanyId, Employee Employee)
+                        {
+                                Employee.CompanyId=CompanyId;
+                                Create(Employee);
+                        }
+
                         public Employee GetEmployee(Guid EmployeeId, bool asTracking)
                         {
                                  return FindByCondation(d=>d.Id.Equals(EmployeeId),asTracking).SingleOrDefault();
