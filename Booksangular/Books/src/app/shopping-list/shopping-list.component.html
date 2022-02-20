@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-8">
+    <app-shopping-edit></app-shopping-edit>
+
+  <div class="list-group mt-2" style="cursor: pointer;">
+    <a  class="list-group-item list-group-item-action" aria-current="true"
+    *ngFor="let ingredient of ingredients ;let i=index;"
+    routerLinkActive="active"
+    (click)="Onedit(i)"
+    >
+      <div class="d-flex w-100 ">
+        <h4 class="mb-1">{{ingredient.name}}({{ingredient.amount}})</h4>
+      </div>
+    </a>
+  </div>
+  </div>
+</div>

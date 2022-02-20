@@ -1,0 +1,15 @@
+<form [formGroup]="addMessage"(ngSubmit)="onSubmite()" >
+  <div class="mb-3">
+    <label for="subject" class="form-label">Subject</label>
+    <input type="text" class="form-control" id="subject" placeholder="subject"
+      formControlName="subject"
+    >
+  </div>
+  <div class="mb-3">
+    <label for="Message" class="form-label">Message</label>
+    <textarea class="form-control" id="Message" rows="3"
+      formControlName="message"
+    ></textarea>
+  </div>
+  <button class="btn btn-success"> add message </button>
+</form>

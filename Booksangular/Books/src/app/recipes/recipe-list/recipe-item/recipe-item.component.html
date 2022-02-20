@@ -1,0 +1,14 @@
+<a [routerLink]="[index]" routerLinkActive="router-link-active"  class="list-group-item list-group-item-action" aria-current="true">
+  <div class="d-flex w-100 justify-content-between">
+    <h4 class="mb-1">{{recipe.name}}</h4>
+    <img style="width: 50px;" [src]="recipe.imagePath"/>
+  </div>
+  <p class="mb-1">{{recipe.discription}}</p>
+</a>
+<!-- <a href="#" class="list-group-item list-group-item-action" aria-current="true" *ngFor="let recipe of recipes">
+  <div class="d-flex w-100 justify-content-between">
+    <h4 class="mb-1">{{recipe.name}}</h4>
+    <img style="width: 50px;" [src]="recipe.imagePath"/>
+  </div>
+  <p class="mb-1">{{recipe.discription}}</p>
+</a> -->

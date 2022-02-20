@@ -1,0 +1,9 @@
+<button type="button" class="btn btn-success mt-2" (click)="openNewComponent()" >New Recipe</button>
+<div class="list-group mt-2">
+ <app-recipe-item
+ *ngFor="let item of recipes ;let i=index"
+  [recipe]="item"
+  [index]="i"
+
+  ></app-recipe-item>
+</div>

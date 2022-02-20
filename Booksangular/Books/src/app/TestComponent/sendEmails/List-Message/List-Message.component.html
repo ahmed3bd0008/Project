@@ -1,0 +1,5 @@
+
+<div class="list-group" *ngIf="messagelist">
+
+<app-Message *ngFor="let item of messagelist let i=index;" [message]="item" (click)=" openSendMessage(i)" ></app-Message>
+</div>

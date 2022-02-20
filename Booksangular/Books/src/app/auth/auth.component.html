@@ -1,0 +1,27 @@
+<div  class="container mt-4">
+  <form #f="ngForm" (ngSubmit)="onSubmite(f)">
+    <h4 class="text-center" >{{isLoginModel?'logen':'Sigin In'}}</h4>
+    <div class="form-group">
+      <label>Email</label>
+      <input class="form-control form-control-lg"
+      type="email" placeholder=".form-control-lg" aria-label=".form-control-lg example"
+      name="email"
+      #email
+      ngModel
+      >
+    </div>
+    <div class="form-group">
+      <label>PassWord</label>
+      <input class="form-control form-control-lg"
+       type="password" placeholder=".form-control-lg" aria-label=".form-control-lg example"
+       name="password"
+       #password
+       ngModel
+       >
+    </div>
+    <div class="text-center" style="margin: auto;">
+      <button type="submit" class="btn btn-success mx-2">{{isLoginModel?'logen':'Sigin In'}}</button>
+      <button type="button" (click)="switchModelLogien()" class="btn btn-primary mx-2">switch to{{isLoginModel?'logen':'Sigin In'}}</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+/* .card-img-top {
+  width:100%;
+  max-height:100%;
+  object-fit: cover;
+} */
+.card-img-top {
+  margin-top: 10px;
+  display: inline-block;
+  height: 350px;
+  width: 3500px;
+  overflow: hidden;
+}
+/* Important stuff for this demo. */
+/* Important stuff for this demo. */
+

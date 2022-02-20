@@ -1,0 +1,32 @@
+
+  <div class="row " *ngIf="recipe">
+    <div class="col-12">
+      <img src={{recipe.imagePath}} class="card-img-top  rounded mx-auto d-block img-thumbnail" alt="...">
+    </div>
+    <div class="col-12">
+      <h1>{{recipe.name}}</h1>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem (click)="AddingredentstoShop()">Go To List</button>
+              <button ngbDropdownItem (click)="onEditRecipe()">Edit Recipce</button>
+              <button ngbDropdownItem (click)="deleteRecipe()">delete Recipe</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-12">
+      <h5>Description</h5>
+    </div>
+    <div class="col-12">
+      <ul class="list-group">
+        <li
+         *ngFor="let item of recipe.ingredient"
+         class="list-group-item">{{item.name}}({{item.amount}})</li>
+      </ul>
+    </div>
+  </div>

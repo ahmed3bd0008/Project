@@ -1,0 +1,6 @@
+<p *ngFor="let item of pipeArray|slice:0:4">
+{{item.name |shotline }}|{{item.type}}|{{item.date |date:'fullDate'}}
+</p>
+
+
+<div>{{gender | i18nSelect: inviteMap}}</div>
